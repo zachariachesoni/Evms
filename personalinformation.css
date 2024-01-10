@@ -1,0 +1,173 @@
+/* Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Sets the font for the entire webpage */
+    margin: 0; /* Removes default margin to ensure content touches edges of the viewport */
+    display: flex; /* Enables flexbox layout for the body element and its children */
+    flex-direction: column; /* Arranges flex items vertically (top to bottom) */
+    align-items: center; /* Centers flex items horizontally */
+    justify-content: center; /* Centers flex items vertically */
+    height: 100vh; /* Sets the body height to 100% of the viewport height */
+    background-color:#750d0f; /* Background color of the body */
+    color: white; /* Text color */
+    
+        
+
+}
+.container{
+   color:white;
+   text-align: center;
+   width: 350px;
+   height: 500px;
+   background:#2b4e3a; /* colour of the sign up container*/
+   overflow: hidden;
+   background: url(images/african\ print.jpg);/* colour of the sign up container*/
+   border-radius: 10px;
+   box-shadow: 5px 20px 50px #0f0f0f;
+   position: absolute; /* Added: position absolute */
+   top: 50%; /* Added: Align the top edge of the element at the vertical center */
+   left: 50%; /* Added: Align the left edge of the element at the horizontal center */
+   transform: translateX(-100%) translateY(-50%); /* Added: Adjust the position to center the element */
+}
+
+/* Order History Styles */
+.order-history ul {
+    list-style: none; /* Removes default list styles (bullet points) from <ul> */
+}
+
+.order-history ul li {
+    margin-bottom: 10px; /* Adds space between each item in the list */
+}
+
+/* Profile and Settings Styles */
+.profile, .settings {
+    margin-top: 30px; /* Adds space between Order History and Profile/Settings sections */
+    text-align: center; /* Centers text inside these sections */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Adds space between form elements */
+}
+
+form input {
+    width: 80%; /* Sets the width of input boxes to 80% of their parent element */
+    max-width: 300px; /* Sets a maximum width for input boxes */
+    padding: 8px; /* Adds internal space within input boxes */
+    margin-top: 5px; /* Adds space between input boxes and surrounding elements */
+    border: none; /* Sets a 1-pixel solid border with a light gray color */
+    border-radius: 5px; /* Rounds the corners of input boxes */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-size: 14px; /* Sets the font size of input text */
+}
+
+form button {
+    width: 60%;
+   height: 40px;
+   margin: 10px auto;
+   justify-content: center;
+   display: block;
+   color: #e1bc78;
+   background: #2b4e3a;
+   font-size: 1em;
+   font-weight: bold;
+   margin-top: 20px;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   transition: .2s ease-in;
+   cursor: pointer;
+}
+
+/* Save button styles (unchanged) */
+form Button:hover {
+    background: #326445;/* Changes the background color when hovering over the button */
+}
+
+/* Header Container Styles */
+.header-container {
+    position: fixed; /* Fixed position keeps the header fixed at the top of the viewport */
+    top: 0; /* Aligns the header to the top of the page */
+    width: 100%; /* Makes the header span the entire width of the viewport */
+    display: flex; /* Enables flex layout for child elements */
+    justify-content: space-between; /* Space between logo and navigation items */
+    align-items: center; /* Vertically centers items within the header */
+    padding: 10px 20px; /* Adds padding inside the header for spacing */
+   background:#c27707;/* Background color of the header */
+   background-blend-mode: multiply; /* Specifies the blend mode (multiply) */
+}
+
+/* Logo Styles */
+.logo img {
+    width: 40px; /* Sets the width of the logo */
+    height: 40px; /* Sets the height of the logo */
+    object-fit: contain; /* Ensures the logo fits inside the designated space */
+    margin-right: 10px; /* Adds space between the logo and home button */
+    margin-right: 10px; /* Adds space between the logo and home button */
+    margin-left: 20px; /* Adjust the margin from the left side of the logo */
+    margin-top: 5px; /* Adjust the margin from the top of the logo */
+    margin-bottom: 5px; /* Adjust the margin from the bottom of the logo */
+}
+
+/* Home Button Styles */
+.navigation a {
+    text-decoration: none; /* Removes underline from the anchor (link) */
+    color: white; /* Sets the text color of the home button */
+    font-weight: bold; /* Sets the font weight to bold */
+    display: flex; /* Enables flex layout for text and icon alignment */
+    align-items: center; /* Vertically centers text and icon within the button */
+    margin-right: 20px; /* Adjust the margin from the right side of the home button */
+    margin-left: 10px; /* Adjust the margin from the left side of the home button */
+    margin-top: 5px; /* Adjust the margin from the top of the home button */
+    margin-bottom: 5px; /* Adjust the margin from the bottom of the home button */
+    position: relative; /* Required for absolute positioning of the underline */
+    transition: 0.3s; /* Smooth transition effect for the underline */
+}
+
+/* Home Button Icon Styles */
+.navigation .home-icon {
+    margin-right: 5px; /* Adds space between icon and text */
+}
+
+/* Underline Animation Effect on Hover */
+.navigation a:hover::after {
+    transform: scaleX(1); /* Scale the underline to full width on hover */
+    transform-origin: bottom left; /* Set the origin to bottom left for smooth animation */
+}
+
+
+/* Underline Animation for Home Button */
+.navigation a::after {
+    content: ''; /* Create an empty pseudo-element for the underline */
+    position: absolute; /* Position the underline absolutely */
+    left: 0; /* Start the underline from the left */
+    bottom: -2px; /* Position the underline 2 pixels above the bottom */
+    width: 100%; /* Make the underline cover the full width of the home button */
+    height: 2px; /* Set the height of the underline */
+   background: #2b4e3a; /* Color of the underline */
+    transform: scaleX(0); /* Initially, set the scale of the underline to 0 (invisible) */
+    transform-origin: bottom right; /* Set the origin to bottom right for transform effect */
+    transition: transform 0.3s ease; /* Add a transition effect for the underline animation */
+}
+
+/* Upcoming Events Section Styles */
+.upcoming-events {
+  color: #ccc;
+  width: 45%; /* Adjust the width as needed */
+  background-color: #2b4e3a; /* Set background color */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Add border-radius */
+  box-shadow: 5px 20px 50px #0f0f0f;/* Add a subtle box shadow */
+  margin-left: 800px;
+  overflow: auto;
+  margin-top:20px ;
+  text-align: center;
+  position: relative;
+  max-width: fit-content;
+  max-height: fit-content;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.event-item {
+    margin-bottom: 10px; /* Adds space between each event detail */
+}
+
+

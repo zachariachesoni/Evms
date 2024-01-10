@@ -1,0 +1,337 @@
+/* Reset default styles for body, headings, and paragraphs */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Set global body styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font for the entire body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #750d0f; /* Background color of the body */
+    color: rgb(0, 0, 0); /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sets the body height to 100% of the viewport height */
+    margin: 0;
+    position: relative; /* Set position to relative for proper stacking context */
+    overflow: hidden;
+    margin-top: 50px;
+    scrollbar-color: #888 #eee;
+    overflow-y: auto;
+}
+
+.admin-content h2 {
+    margin-top: 5px; /* Adjust the margin-top value to your preference */
+    
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    display: none; /* Hide the scrollbar by default */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:#888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round the corners of the scrollbar thumb */
+}
+
+body:hover::-webkit-scrollbar {
+    display: block; /* Show the scrollbar when hovering over the body */
+}
+
+
+/* Logo Styles */
+.logo {
+    text-align: center; /* Center the logo */
+    padding: 10px 0; /* Add padding to the logo */
+    width: 100%; /* Make the logo span the full width */
+    background-color: #c27707; /* Background color of the logo area */
+    color: rgb(10, 10, 10); /* Text color of the logo */
+    position: fixed; /* Fixed position for the logo */
+    top: 0; /* Distance from the top of the viewport */
+    left: 0; /* Align the logo to the left */
+    z-index: 1002; /* Stack order above the menu */
+    display: flex; /* Use flexbox to align content */
+    justify-content: space-between; /* Space content evenly */
+    align-items: center; /* Center content vertically */
+}
+
+/* Logo Image Styles */
+.logo img {
+    width: 40px; /* Width of the logo image */
+    height: 40px; /* Height of the logo image */
+    object-fit: contain; /* Maintain the aspect ratio of the logo */
+    margin-right: 10px; /* Right margin of the logo */
+    margin-left: 20px; /* Left margin of the logo */
+}
+
+/* Home Button Styles */
+.home-button {
+    margin-right: 20px; /* Add margin to the home button */
+}
+
+
+/* Reports Section Heading */
+.reports h3 {
+    text-align: center; /* Align the heading to the right */
+    margin-bottom: 15px; /* Add some space below the heading */
+}
+
+/* Event List Section Heading */
+.event-list h3 {
+    text-align: center; /* Align the heading to the right */
+    margin-bottom: 15px; /* Add some space below the heading */
+}
+
+/* Post Poster Section Heading */
+.post-poster h3 {
+    text-align: center; /* Align the heading to the right */
+    margin-bottom: 15px; /* Add some space below the heading */
+}
+
+/* Edit Event Details Section Heading */
+.edit-event-details h3 {
+    text-align: center; /* Align the heading to the right */
+    margin-bottom: 15px; /* Add some space below the heading */
+}
+
+.reports {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 60px 10px 0; 
+    padding: 20px;
+    background: #326445;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for Captions in Reports Section */
+.reports label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff; /* Caption text color */
+}
+
+/* Styles for Input Boxes in Reports Section */
+.reports input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Input border color */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Adjust the margin based on your preference */
+    box-sizing: border-box;
+}
+/* CSS for the icons */
+.icon-wrapper i {
+    font-size: 24px;
+    color: rgb(22, 15, 15);
+    margin: 0 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* Hover effect for icons */
+.icon-wrapper i:hover {
+    transform: scale(1.2);
+    color: #326445;
+}
+
+/* Styles for icon wrappers */
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Styles for captions */
+.icon-caption {
+    font-size: 12px;
+    margin-top: 5px;
+    color: black;
+    display: inline-block;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Container for Sections */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this based on your spacing preference */
+    margin-top: 20px; /* Increase distance from the logo */
+    flex-grow: 1;
+    
+}
+
+/* First Row Sections */
+.first-row {
+    display: flex;
+    justify-content: space-between; /* Space content evenly */
+    width: 100%; /* Make sure it spans the full width */
+    margin-bottom: 20px; /* Add margin between the rows */
+}
+
+/* Event List Styles */
+.event-list {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 10px;
+    padding: 20px;
+    background: #326445;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Accept-Reject Styles */
+.accept-reject {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 10px;
+    padding: 20px;
+    background: #326445;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Second Row Sections */
+.second-row {
+    display: flex;
+    justify-content: space-between; /* Space content evenly */
+    width: 100%; /* Make sure it spans the full width */
+}
+
+/* Reports Styles */
+.reports {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 10px;
+    padding: 20px;
+    background: #326445;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Poster Styles */
+.post-poster {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 10px;
+    padding: 20px;
+    background: #326445;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the image input and its caption */
+#event-image {
+    /* Align the image input with other form elements */
+    margin-top: 10px;
+}
+
+/* Style for the image caption */
+label[for="event-image"] {
+    /* Align the label with the image input */
+    display: block; /* Ensure the label is a block-level element */
+    margin-top: 10px;
+}
+
+
+/* Edit Event Details Styles */
+.edit-event-details {
+    flex: 1;
+    box-sizing: border-box;
+    width: 350px;
+    margin: 0 10px;
+    padding: 20px;
+    background: #326445;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form button {
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Apply general styles to all buttons */
+button {
+    width: 40%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #e1bc78;
+    background: #2b4e3a;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+/* Style the submit button specifically */
+button {
+    /* Add a different background color to distinguish the submit button */
+    background-color: #114d2a; /* You can change this color as well */
+}
+
+/* Add a hover effect for all buttons */
+button:hover {
+    background-color: #15271c; /* Darker shade on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#image-preview {
+    max-width: 200px; /* Set your desired maximum width */
+    max-height: 150px; /* Set your desired maximum height */
+    display: none; /* Initially hide the image preview */
+
+}
+
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

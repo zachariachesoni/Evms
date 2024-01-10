@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>mensa</title>
+    <link rel="shortcut icon" type="images" href="images/logosmaller.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body id="top">
+    <section class="header">
+        <nav>
+            <a href="loginpage.html"> <img src="images/logosmaller.png" alt=""> </a> 
+            <div class="nav-links">
+                <ul>
+                    <li> <a href="#top">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true" autocomplete="on">
+
+            <div class="signup">
+                <form>
+                    <label for="chk" aria-hidden="true">Sign up</label>
+
+                    <input type="email" name="email" placeholder="Email" required="" autocomplete="on" id="inputemail">
+                    <input type="password" name="pswd" placeholder="Password" required="" id="inputpassword">
+                    <button id="signup">Sign up</button>
+                </form>
+            </div>
+
+            <div class="login">
+                <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="email" name="email" placeholder="Email" required="" autocomplete="on">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button>Login</button>
+                    <p><a href="forgotpassword.html" id="forgotPasswordLink">forgot your password?</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="Aboutus" id="about">
+        <h1>About us</h1>
+        <p>Welcome to Mensa, where we transform ordinary events into extraordinary experiences! <br> Established with a passion for creativity and a dedication to perfection, <br> we specialize in curating unforgettable events tailored to your unique vision.</p>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+        <h1>Who we are</h1> 
+        <p>
+            
+            The Mensa is a team of passionate and experienced event planners who are dedicated to helping our clients create unforgettable experiences. We specialize in planning a wide range of events, from small gatherings to large-scale conferences, for a variety of industries, including marketing, advertising, and technology.
+            
+            We are committed to providing our clients with the highest level of service and support. We understand that planning an event can be complex and challenging, so we are here to help every step of the way. We work closely with our clients to understand their needs and vision, and then we develop a customized plan to bring their event to life.</p>
+    </section>
+
+    <section class="contactus" id="contact">
+        
+        <h1>Contact us</h1>
+        <p><br> Head Office: 123 Magical Avenue, Prestige Plaza, 5th Floor, Nairobi, Kenya<br> Phone: +254 712 345 678 +254 712 987 654<br> Email: info@yourcompany.co.ke<br> Customer Support: support@yourcompany.co.ke<br> Business Hours: Monday - Friday: 9:00 AM to 6:00 PM<br> Saturday: 10:00 AM to 2:00 PM<br> Sunday: Closed<br> Social Media <div class="social-media-icons">
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <br> We look forward to hearing from you and assisting with your inquiries!</p>
+        </div>
+    </section>
+
+    <script>/* the scrolling effect after you click about and contatc from the navbar*/
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+    </script>
+
+    <script>
+        document.getElementById("forgotPasswordLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the default behavior of the hyperlink
+
+    // Redirect the user to the Forgot Password page
+    window.location.href = "forgot-password.html";
+});
+
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
