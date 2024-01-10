@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="images" href="images/logosmaller.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Administrator</title>
+</head>
+
+<body>
+    <div class="admin-panel">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="images/logosmaller.png" alt="An example image">
+            <h2>Welcome administrator !</h2>
+            <div class="icon-wrapper">
+                <a href="landingpage.html">
+                    <i class="material-symbols-outlined">Home</i>
+                    <span class="icon-caption">Home</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Admin Panel Sections -->
+        <div class="admin-content">
+            
+            <!-- Section Container for Side-by-Side Display -->
+            <div class="section-container">
+                <!-- First Row Sections -->
+                <div class="first-row">
+                    <!-- Reports Section -->
+                    <div class="reports">
+                        <h3>Website Reports</h3>
+                        <!-- Display reports on website usage and visits -->
+                        <div class="report-details">
+                            <p>Total Users: <!-- Include dynamic data here --></p>
+                            <p>Total Events: <!-- Include dynamic data here --></p>
+                            <p>Total Visits: <!-- Include dynamic data here --></p>
+                        </div>
+                    </div>
+
+                    <!-- Event List Section -->
+                    <div class="event-list">
+                        <h3>Upcoming Events</h3>
+                        <!-- Display events created by users -->
+                        <ul class="events">
+                            <!-- Each event item will be listed here -->
+                            <!-- Include event details like name, date, and status -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Second Row Sections -->
+                <div class="second-row">
+                    <!-- Post Poster Section -->
+                    <div class="post-poster">
+                        <h3>Post Event Poster</h3>
+                        <!-- Form to input date, time, and cost of the event -->
+                        <label for="event-image">Event Image:</label>
+                        <br>
+                        <input type="file" id="event-image" name="event-image" accept="image/*">
+                        <br>
+                        <br>
+                        <img id="image-preview" src="#" alt="Event Image Preview" style="max-width: 100%; display: none;">
+                        <form method="POST" class="poster-form">
+                            <!-- Include input fields for date, time, and cost -->
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+
+                            <label for="time">Time:</label>
+                            <input type="time" id="time" name="time" required>
+
+                            <label for="cost">Cost:</label>
+                            <input type="text" id="cost" name="cost" placeholder="Enter cost" required>
+
+                            <!-- Submit button for posting the poster -->
+                            <button type="submit">Post Event</button>
+                        </form>
+                    </div>
+
+                    <!-- Edit Event Details Section -->
+                    <div class="edit-event-details">
+                        <h3>Edit Event Details</h3>
+                        <!-- Form to edit cost, venues, and packages -->
+                        <form method="POST" class="edit-form">
+                            <label for="edit-cost">Edit Cost:</label>
+            <input type="text" id="edit-cost" name="edit-cost" placeholder="Enter new cost">
+
+            <label for="edit-venues">Edit Venues:</label>
+            <input type="text" id="edit-venues" name="edit-venues" placeholder="Enter new venues">
+
+            <label for="edit-food-packages">Edit Food Package:</label>
+            <input type="text" id="edit-food-packages" name="edit-food-packages" placeholder="Enter new food package">
+
+            <label for="edit-entertainment-packages">Edit Entertainment Package:</label>
+            <input type="text" id="edit-entertainment-packages" name="edit-entertainment-packages" placeholder="Enter new entertainment package">
+
+            <!-- Submit button for editing event details -->
+            <button type="button" onclick="updateEventDetails()">Edit Details</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="admin.js"></script>
+</body>
+
+</html>
