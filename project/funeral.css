@@ -1,0 +1,203 @@
+
+body {
+    transition:background-image 1s ease;
+    -webkit-transition: background-image 1s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    top:60px;
+    background-color: #750d0f;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin-top: 0;
+    scrollbar-color: #888 #eee;
+    overflow-y: auto;
+  }
+  
+  body.initial-background {
+    background-color: #750d0f; 
+    background-image: none !important; 
+  }
+  
+  /* Styles for the logo section */
+  .logo {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #c27707;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2002;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo Styles */
+  .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  
+  .icon-wrapper a {
+    font-size: 15px;
+    margin-right: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .icon-wrapper a:hover {
+    transform: scale(1.2);
+    color: #2b4e3a;
+  }
+  
+  .icon-caption {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Styles for the navbar */
+  .navbar {
+    z-index: 1001;
+    height: 60px;
+    text-align: center;
+    overflow-x: auto;
+    padding: 10px 0;
+    position:sticky;
+    width: 100%;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1001;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #c27707;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Styles for heading */
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Container for Wedding Menu and Event Details styling */
+  .wedding-details-container {
+    position: relative;
+    height: auto;
+    top:150px;
+    z-index: 1;
+    overflow: auto;
+    max-width: fit-content;
+    display: flex;
+    color: #f8f8f8;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b4e3a;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Wedding Details heading styling */
+  .wedding-details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  /* Event Details container styling */
+  .event-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Style the labels and input/select elements in the Event Details section */
+  .event-details label {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .event-details input,
+  .event-details select,
+  .dropdowns input,
+  .dropdowns select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Dropdowns container styling */
+  .dropdowns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .package-info {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Style the labels and select elements in the Dropdowns section */
+  .dropdowns label {
+    text-align: center;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .dropdowns select {
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 10px;
+    width: 45%;
+  }
+  
+  /* Details container styling */
+  .details {
+    margin-top: 20px;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .event-details label,
+    .event-details input,
+    .event-details select,
+    .dropdowns label,
+    .dropdowns select {
+      width: 100%;
+    }
+  }
+  
