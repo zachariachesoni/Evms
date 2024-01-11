@@ -4,7 +4,7 @@
     <title>mensa</title>
     <link rel="shortcut icon" type="images" href="images/logosmaller.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -30,18 +30,20 @@
         <div class="main">
             <input type="checkbox" id="chk" aria-hidden="true" autocomplete="on">
 
-            <div class="signup">
-                <form>
+            <div class="signupp">
+                <form action="includes/signup.php" method="post">
                     <label for="chk" aria-hidden="true">Sign up</label>
 
                     <input type="email" name="email" placeholder="Email" required="" autocomplete="on" id="inputemail">
-                    <input type="password" name="pswd" placeholder="Password" required="" id="inputpassword">
-                    <button id="signup">Sign up</button>
+                    <input type="password" name="password" placeholder="Password" required="" id="inputpassword">
+                    <button type="submit" onclick="console.log('Button clicked!')">signup</button>
+
+
                 </form>
             </div>
 
             <div class="login">
-                <form>
+                <form action="includes/login.php" method="post">
                     <label for="chk" aria-hidden="true">Login</label>
                     <input type="email" name="email" placeholder="Email" required="" autocomplete="on">
                     <input type="password" name="pswd" placeholder="Password" required="">

@@ -1,10 +1,21 @@
+<?php
+require 'includes/db_connection.php';
+
+// Fetch all events
+$eventsQuery = $conn->query("SELECT * FROM Events ORDER BY date DESC");
+$events = $eventsQuery->fetchAll(PDO::FETCH_ASSOC);
+
+// Fetch all users
+$usersQuery = $conn->query("SELECT * FROM Users ORDER BY id DESC");
+$users = $usersQuery->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="images" href="images/logosmaller.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -62,13 +73,30 @@
 
                     <!-- Event List Section -->
                     <div class="event-list">
-                        <h3>Upcoming Events</h3>
-                        <!-- Display events created by users -->
-                        <ul class="events">
-                            <!-- Each event item will be listed here -->
-                            <!-- Include event details like name, date, and status -->
-                        </ul>
-                    </div>
+   <h3>Upcoming Events</h3>
+   <ul class="events">
+       <?php foreach ($events as $event): ?>
+           <li>
+               <h4><?= $event['name'] ?></h4>
+               <p>Date: <?= $event['date'] ?></p>
+               <p>Status: <?= $event['status'] ?></p>
+               <!-- Add more details as needed -->
+           </li>
+       <?php endforeach; ?>
+   </ul>
+</div>
+<div class="user-list">
+   <h3>Users</h3>
+   <ul class="users">
+       <?php foreach ($users as $user): ?>
+           <li>
+               <h4><?= $user['username'] ?></h4>
+               <p>Email: <?= $user['email'] ?></p>
+               <!-- Add more details as needed -->
+           </li>
+       <?php endforeach; ?>
+   </ul>
+</div>
                 </div>
                 <div class="reports">
                     <h3>Website Reports</h3>
@@ -89,7 +117,7 @@
             </div>
         </div>
     </div>
- <script src="admin.js"></script>
+ <script src="assets/js/admin.js"></script>
 </body>
 
 </html>
